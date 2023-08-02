@@ -1,0 +1,8 @@
+User will see the lis of hotels
+user will book the hotel
+user will get the reservation ticket
+
+Class required:
+Hotel
+    book
+ReservationTicket
