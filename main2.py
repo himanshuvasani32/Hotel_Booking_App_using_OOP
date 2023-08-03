@@ -33,11 +33,11 @@ class ReservationTicket:
     def generate(self):
         """Generates the reservation details of hotel booking."""
         content = f"""
-Thank you for the reservation!
-Here's your booking details:
-Name = {self.customer_name}
-Hotel = {self.hotel.name}
-"""
+        Thank you for the reservation!
+        Here's your booking details:
+        Name = {self.customer_name}
+        Hotel = {self.hotel.name}
+        """
         return content
 
 
@@ -71,11 +71,11 @@ class BookSpaPackage:
 
     def bookspa(self):
         content = f"""
-Thank you for the reservation!
-Here's your booking details:
-Name = {self.customer_name}
-Hotel = {self.hotel.name}
-"""
+        Thank you for the reservation!
+        Here's your booking details:
+        Name = {self.customer_name}
+        Hotel = {self.hotel.name}
+        """
         return content
 
 

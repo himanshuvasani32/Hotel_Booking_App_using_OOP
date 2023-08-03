@@ -4,6 +4,7 @@ df = pandas.read_csv("hotels.csv", dtype={"id": str})
 df_cards = pandas.read_csv("cards.csv", dtype=str).to_dict(orient="records")
 df_secure_card = pandas.read_csv("card_security.csv", dtype=str)
 
+
 class Hotel:
 
     def __init__(self, hotel_id):
@@ -38,12 +39,18 @@ class ReservationTicket:
     def generate(self):
         """Generates the reservation details of hotel booking."""
         content = f"""
-Thank you for the reservation!
-Here's your booking details:
-Name = {self.customer_name}
-Hotel = {self.hotel.name}
-"""
+        Thank you for the reservation!
+        Here's your booking details:
+        Name = {self.the_customer_name}
+        Hotel = {self.hotel.name}
+        """
         return content
+
+    @property
+    def the_customer_name(self):
+        name = self.customer_name.strip()
+        name = name.title()
+        return name
 
 
 class CreditCard:
@@ -79,10 +86,16 @@ class SpaTicket:
         content = f"""
         Thank you for the reservation!
         Here's your booking details:
-        Name = {self.customer_name}
+        Name = {self.the_customer_name}
         Hotel = {self.hotel.name}
         """
         return content
+
+    @property
+    def the_customer_name(self):
+        name = self.customer_name.strip()
+        name = name.title()
+        return name
 
 
 print(df)
